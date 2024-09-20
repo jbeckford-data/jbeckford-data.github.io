@@ -2,7 +2,7 @@
 
 --- 
 
-[Surface View of Treasury Curve](/sample_page.md)
+[Surface View of Treasury Curve](https://github.com/jbeckford-data/Treasury-Curve/blob/main/Surface%20Plot%20of%20Treasury%20Curve.ipynb)
 <img src="images/T_Curve_2024.png"/>
 <!---
 ---
