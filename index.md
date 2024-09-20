@@ -3,7 +3,7 @@
 --- 
 
 [Surface View of Treasury Curve - Jupyter Notebook](/Surface_Plot_Treasury_Curve.md)
-<img src="images/T_Curve_2024.png width=400, height=400"/>
+<p><img src="images/T_Curve_2024.png" width="400" height="400" />
 <p><img alt="" src="https://img.shields.io/badge/Python-white?logo=Python" />
   <img alt="" src="https://img.shields.io/badge/Pandas-blue?logo=pandas" />
   <img alt="" src="https://img.shields.io/badge/Plotly-grey?logo=Plotly" />
