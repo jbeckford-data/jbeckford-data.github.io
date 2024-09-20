@@ -4,8 +4,8 @@
 
 ### Category Name 1 
 
-[Project 1 Title](/sample_page)
-<img src="images/dummy_thumbnail.jpg?raw=true"/>
+[Surface View of Treasury Curve](/sample_page)
+<img src="images/T_Curve_2024.png)"/>
 
 ---
 [Project 2 Title](/pdf/sample_presentation.pdf)
