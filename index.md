@@ -4,7 +4,7 @@
 
 [Surface View of Treasury Curve](/sample_page.md)
 <img src="images/T_Curve_2024.png"/>
-
+<!---
 ---
 [Project 2 Title](/pdf/sample_presentation.pdf)
 <img src="images/dummy_thumbnail.jpg?raw=true"/>
@@ -24,3 +24,4 @@
 - [Project 5 Title](http://example.com/)
 
 ---
+--->
