@@ -6,7 +6,7 @@
 <img src="images/T_Curve_2024.png"/>
 <p><img alt="" src="https://img.shields.io/badge/Python-white?logo=Python" />
   <img alt="" src="https://img.shields.io/badge/Pandas-blue?logo=pandas" />
-  <img alt="" src="https://img.shields.io/badge/Plotly-blue?logo=Plotly" />
+  <img alt="" src="https://img.shields.io/badge/Plotly-grey?logo=Plotly" />
 <!---
 <img alt="" src="https://img.shields.io/badge/sklearn-white?logo=scikit-learn" /> 
 <img alt="" src="https://img.shields.io/badge/Google-white?logo=mlflow" />
