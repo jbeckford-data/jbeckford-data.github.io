@@ -2,7 +2,7 @@
 
 --- 
 
-[Surface View of Treasury Curve - Jupyter Notebook](https://github.com/jbeckford-data/Treasury-Curve/blob/main/Surface%20Plot%20of%20Treasury%20Curve.ipynb)
+[Surface View of Treasury Curve - Jupyter Notebook](/Surface _Plot_Treasury_Curve.md)
 <img src="images/T_Curve_2024.png"/>
 <p><img alt="" src="https://img.shields.io/badge/Python-white?logo=Python" />
   <img alt="" src="https://img.shields.io/badge/Pandas-blue?logo=pandas" />
