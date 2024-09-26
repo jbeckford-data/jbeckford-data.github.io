@@ -16,8 +16,7 @@
 <!-- [Project 2 Title](/pdf/sample_presentation.pdf) -->
 <!-- <img src="images/dummy_thumbnail.jpg?raw=true"/> -->
 
----
-<br>
+<hr>
 
 [Options Analyzer - Streamlit App](https://options-analyzer-app.streamlit.app/)
 <br> <img src="images/52183258.png?raw=true"/>
