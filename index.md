@@ -12,7 +12,7 @@
 <!-- <img alt="" src="https://img.shields.io/badge/Google-white?logo=mlflow" /> -->
 
 
----
+
 <!-- [Project 2 Title](/pdf/sample_presentation.pdf) -->
 <!-- <img src="images/dummy_thumbnail.jpg?raw=true"/> -->
 
@@ -20,7 +20,7 @@
 
 ---
 [Options Analyzer - Streamlit App](https://options-analyzer-app.streamlit.app/)
-# <img src="images/dummy_thumbnail.jpg?raw=true"/>
+<br> <img src="images/52183258.png?raw=true"/>
 
 ---
 <!--
