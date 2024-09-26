@@ -6,4 +6,4 @@
 <img src="https://github.com/jbeckford-data/jbeckford-data.github.io/blob/master/images/T_Curve_2024.png" width="400" height="400"/>
 
 
-[Open this project - Jupyter Notebook - in Google Colab](https://colab.research.google.com/github/jbeckford-data/Treasury-Curve/blob/main/Surface%20Plot%20of%20Treasury%20Curve.ipynb)
+[Open this Jupyter Notebook in Google Colab](https://colab.research.google.com/github/jbeckford-data/Treasury-Curve/blob/main/Surface%20Plot%20of%20Treasury%20Curve.ipynb)
