@@ -17,8 +17,8 @@
 <!-- <img src="images/dummy_thumbnail.jpg?raw=true"/> -->
 
 <hr>
-
-[Options Analyzer Streamlit App](https://options-analyzer-app.streamlit.app/)
+<a href= "https://options-analyzer-app.streamlit.app/">
+Options Analyzer Streamlit App</a>
 
 <p><strong>Note:</strong> - Directed to Streamlit Community Cloud</p>
 <img src="images/52183258.png?raw=true"/>
