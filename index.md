@@ -21,7 +21,7 @@
 [Options Analyzer Streamlit App](https://options-analyzer-app.streamlit.app/)
 
 <div class="info">
-  <p><strong><pre>Note:</pre></strong> - Directed to Streamlit Community Cloud</p>
+  <p><strong>Note:</strong> - Directed to Streamlit Community Cloud</p>
 </div>
 
 <br> <img src="images/52183258.png?raw=true"/>
