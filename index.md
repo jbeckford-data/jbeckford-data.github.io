@@ -24,7 +24,6 @@
 
 _Note: Check the "included" checkbox to add any leg to the graph profile._
 </p>
----
 <!--
 ### Category Name 2
 
