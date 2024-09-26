@@ -20,11 +20,8 @@
 
 [Options Analyzer Streamlit App](https://options-analyzer-app.streamlit.app/)
 
-<div class="info">
-  <p><strong>Note:</strong> - Directed to Streamlit Community Cloud</p>
-</div>
-
-<br> <img src="images/52183258.png?raw=true"/>
+<p><strong>Note:</strong> - Directed to Streamlit Community Cloud</p>
+<img src="images/52183258.png?raw=true"/>
 <p> Analyzing multi-leg options strategies is a serious passion of mine.  While every broker offers a similar analysis, I wanted to build one myself.
 
 _Note: Check the "included" checkbox to add any leg to the graph profile._
