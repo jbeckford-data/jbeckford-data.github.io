@@ -25,7 +25,7 @@
 </div>
 
 <br> <img src="images/52183258.png?raw=true"/>
-<p> Analyzing multi-leg options strategies is a serious passion of mine.  While every broker offers a similar app, I wanted to build one myself.
+<p> Analyzing multi-leg options strategies is a serious passion of mine.  While every broker offers a similar analysis, I wanted to build one myself.
 
 _Note: Check the "included" checkbox to add any leg to the graph profile._
 </p>
