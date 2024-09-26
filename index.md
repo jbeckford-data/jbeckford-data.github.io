@@ -18,7 +18,12 @@
 
 <hr>
 
-[Options Analyzer Streamlit App Directed to Streamlit Cloud Community](https://options-analyzer-app.streamlit.app/)
+[Options Analyzer Streamlit App](https://options-analyzer-app.streamlit.app/)
+
+<div class="info">
+  <p><strong><pre>Note:</strong> - Directed to Streamlit Cloud Community</p>
+</div>
+
 <br> <img src="images/52183258.png?raw=true"/>
 <p> Analyzing multi-leg options strategies is a serious passion of mine.  While every broker offers a similar app, I wanted to build one myself.
 
