@@ -1,3 +1,4 @@
+<div>
     <h2>Multi-Leg Options P&L Analyzer</h2>
     <p>
         This analyzer, built as a Streamlit web app, is designed to help traders visualize the profit and loss (P&L) of multi-leg option strategies. 
@@ -12,3 +13,4 @@
         Overall, this tool is invaluable for options traders seeking to evaluate and optimize their trading strategies effectively.
     </p>
     <img src="images/newplot.png" alt="Results Visualization" style="width: 40%; max-width: 600px; margin-bottom: 20px;">
+</div>
