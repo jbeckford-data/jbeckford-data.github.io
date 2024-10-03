@@ -17,7 +17,7 @@
 <!-- <img src="images/dummy_thumbnail.jpg?raw=true"/> -->
 
 <hr>
-[Options Analyzer Streamlit App](/options_analyzer.md)
+<a href= "options_analyzer.md"> Options Analyzer Streamlit App </a>
 <h3></h3>Stock Options Payoff Analyzer</h3>
 <p>Robust tool for options traders and strategies</p>
 <img src="images/52183258.png?raw=true"/>
