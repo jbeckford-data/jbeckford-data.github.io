@@ -15,4 +15,7 @@
         Overall, this tool is invaluable for options traders seeking to evaluate and optimize their trading strategies effectively.
     </p>
     <img src="images/newplot.png" alt="Results Visualization" style="width: 40%; max-width: 600px; margin-bottom: 20px;">
+<a href= "https://options-analyzer-app.streamlit.app/"> Find the project here.
+<p><strong>Note:</strong> - Directed to Streamlit Community Cloud</p>
+
 </div>
