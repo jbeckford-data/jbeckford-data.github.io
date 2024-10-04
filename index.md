@@ -18,7 +18,7 @@
 
 <hr>
 <a href= "options_analyzer.html"> Options Analyzer Streamlit App </a>
-<h3></h3>Stock Options Payoff Analyzer</h3>
+<h3>Stock Options Payoff Analyzer</h3>
 <p>Robust tool for options traders and strategies</p>
 <img src="images/52183258.png?raw=true"/>
 
