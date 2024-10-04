@@ -11,7 +11,7 @@
     <p style="text-indent: 15px;">
         Users can define up to four legs in their strategy, specifying details such as quantity, buy/sell, type (call/put), strike, expiration, risk-free rate, current option price, and original option cost. 
         The application calculates cumulative P&L, Delta, and Theta for the selected strategies, visualizing the results using interactive charts created with <strong>Plotly</strong>. 
-        Additionally, users can customize the display to include delta, theta, or days forward, enhancing their analytical experience. 
+        Additionally, users can customize the display to include delta, theta, days forward, and expiration P&L enhancing their analytical experience. 
         Overall, this tool is invaluable for options traders seeking to evaluate and optimize their trading strategies effectively.
     </p>
     <img src="images/newplot.png" alt="Results Visualization" style="width: 70%; max-width: 600px; margin-bottom: 20px;">
