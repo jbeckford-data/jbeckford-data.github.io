@@ -6,7 +6,7 @@
     <br>
     <img src="images/leg_snip.png" alt="Input Parameters" style="width: 25%; max-width: 600px; margin-bottom: 20px;">
     <br>
-        The tool employs the <strong>mibian</strong> library for calculating implied volatility and other Greeks, providing a comprehensive overview of the options' potential outcomes.
+        The tool employs the <strong>mibian</strong> library for calculating options pricing, implied volatility, and Greeks, providing a comprehensive overview of the options' potential outcomes.
     </p>
     <p style="text-indent: 15px;">
         Users can define up to four legs in their options strategy, specifying details such as quantity, buy/sell, and option costs. 
