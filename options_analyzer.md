@@ -9,7 +9,7 @@
         The tool employs the <strong>mibian</strong> library for calculating options pricing, implied volatility, and Greeks, providing a comprehensive overview of the options' potential outcomes.
     </p>
     <p style="text-indent: 15px;">
-        Users can define up to four legs in their options strategy, specifying details such as quantity, buy/sell, and option costs. 
+        Users can define up to four legs in their options strategy, specifying details such as quantity, buy/sell, type (calll/put), strike, expiration, risk-free rate, current option price, and original option costs. 
         The application calculates cumulative P&L, Delta, and Theta for the selected strategies, visualizing the results using interactive charts created with <strong>Plotly</strong>. 
         Additionally, users can customize the display to include delta, theta, or days forward, enhancing their analytical experience. 
         Overall, this tool is invaluable for options traders seeking to evaluate and optimize their trading strategies effectively.
