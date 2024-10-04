@@ -14,7 +14,7 @@
         Additionally, users can customize the display to include delta, theta, or days forward, enhancing their analytical experience. 
         Overall, this tool is invaluable for options traders seeking to evaluate and optimize their trading strategies effectively.
     </p>
-    <img src="images/newplot.png" alt="Results Visualization" style="width: 100%; max-width: 600px; margin-bottom: 20px;">
+    <img src="images/newplot.png" alt="Results Visualization" style="width: 70%; max-width: 600px; margin-bottom: 20px;">
 <br>
 <br>
 <a href= "https://options-analyzer-app.streamlit.app/"> Find the project here.
