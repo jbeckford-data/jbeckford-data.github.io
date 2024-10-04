@@ -4,7 +4,7 @@
         This analyzer, built as a Streamlit web app, is designed to help traders visualize the profit and loss (P&L) of multi-leg option strategies. 
         By leveraging <strong>yfinance,</strong> the app fetches real-time stock prices, enabling users to input options parameters such as strike price, expiration date, and option type (Call or Put).
     <br>
-    <img src="images/leg_snip.png" alt="Input Parameters" style="width: 100%; max-width: 600px; margin-bottom: 20px;">
+    <img src="images/leg_snip.png" alt="Input Parameters" style="width: 80%; max-width: 600px; margin-bottom: 20px;">
     <br>
         The tool employs the <strong>mibian</strong> library for calculating options pricing, implied volatility, and Greeks, providing a comprehensive overview of the options' potential outcomes.
     </p>
