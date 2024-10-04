@@ -19,5 +19,3 @@
 <br>
 <a href= "https://options-analyzer-app.streamlit.app/"> Find the project here.
 <p><strong>Note:</strong> - Directed to Streamlit Community Cloud</p>
-
-</div>
