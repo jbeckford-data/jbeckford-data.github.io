@@ -18,3 +18,9 @@ Key features:
 ✔ **Systematic strategy evaluation** (performance metrics, risk/reward trends)  
 ✔ **Trade-level auditing** (entry/exit details,  time series analysis)  
 ✔ **Portfolio-level decision support** (scenario comparisons)
+
+---
+
+## **Access the Dashboard**
+🖥️ [Live Streamlit App](https://qc-backtests-ias9ehdjfkjrk4mxktq9mv.streamlit.app/)  
+📂 [GitHub Repository](https://github.com/jbeckford-data/QC-Backtests)
