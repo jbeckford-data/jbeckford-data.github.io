@@ -24,9 +24,9 @@
 
 <hr size="2">
 <div class="project">
-    <h3>QC Backtests: ETL & Dashboard Analysis</h3>
+    <h3>QC Backtests: ETL & Dashboard Analysis</h3>(/QCBacktest.md)
     <p>A data analysis project demonstrating Extract, Transform, Load (ETL) processes and interactive dashboard visualizations for quantitative trading strategies.</p>
-    <p>This repository showcases:</p>
+    <p>This project showcases:</p>
     <ul>
         <li>ETL pipelines for processing backtest results from QuantConnect</li>
         <li>Automated data cleaning and transformation workflows</li>
@@ -34,5 +34,4 @@
         <li>Performance metrics & visualizations (equity curves, drawdowns, risk/reward ratios)</li>
     </ul>
     <p>The project highlights how raw backtest data can be processed into actionable insights through structured data processing and visualization techniques.</p>
-    <a href="https://github.com/jbeckford-data/QC-Backtests" target="_blank">View on GitHub</a>
 </div>
