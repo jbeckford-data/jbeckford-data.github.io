@@ -22,3 +22,16 @@
 <p>Robust tool for options traders and strategies</p>
 <img src="images/52183258.png?raw=true"/>
 
+<div class="project">
+    <h2>QC Backtests: ETL & Dashboard Analysis</h2>
+    <p>A data analysis project demonstrating Extract, Transform, Load (ETL) processes and interactive dashboard visualizations for quantitative trading strategies.</p>
+    <p>This repository showcases:</p>
+    <ul>
+        <li>ETL pipelines for processing backtest results from QuantConnect</li>
+        <li>Automated data cleaning and transformation workflows</li>
+        <li>Interactive dashboards (using Plotly, Streamlit, and other tools)</li>
+        <li>Performance metrics & visualizations (equity curves, drawdowns, risk/reward ratios)</li>
+    </ul>
+    <p>The project highlights how raw backtest data can be processed into actionable insights through structured data workflows and visualization techniques.</p>
+    <a href="https://github.com/jbeckford-data/QC-Backtests" target="_blank">View on GitHub</a>
+</div>
