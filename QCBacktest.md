@@ -5,7 +5,7 @@ permalink: /qc-backtests/
 ---
 
 ![QC-Backtests Dashboard](assets/images/qc-backtests-dashboard.png)  
-*Interactive dashboard for comparative analysis (replace with actual screenshot)*  
+*Interactive dashboard for comparative analysis ([live demo](https://qc-backtests-ias9ehdjfkjrk4mxktq9mv.streamlit.app/))*  
 
 ## **Overview**  
 This project demonstrates **ETL (Extract, Transform, Load) workflows** and **interactive dashboard visualizations** for analyzing QuantConnect backtest results.  
