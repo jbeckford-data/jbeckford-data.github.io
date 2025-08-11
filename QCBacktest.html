@@ -230,8 +230,9 @@
         
         <section class="project-section">
             <h2 class="section-title">Project Overview</h2>
-            <p>This automated pipeline transforms raw QuantConnect backtest results into actionable insights through a comprehensive ETL process and interactive dashboard. The system provides:</p>
-            
+            <p>This automated pipeline transforms raw QuantConnect backtest results into actionable insights through a comprehensive ETL process and interactive dashboard. The system provides comparative performance metrics across differing criteria.</p>
+
+            <!--
             <div class="metric-grid">
                 <div class="metric-card">
                     <div>Strategy CAGR</div>
@@ -253,7 +254,7 @@
                     <div class="metric-value neutral">58.6%</div>
                     <div>Trade Success Ratio</div>
                 </div>
-            </div>
+            </div> -->
         </section>
         
         <section class="project-section">
@@ -263,7 +264,7 @@
             <div class="process-flow">
                 <div class="process-step">
                     <h3>1. Data Extraction</h3>
-                    <p>Pull raw JSON backtest results from QuantConnect API and local backtest files</p>
+                    <p>Pull raw JSON details from QuantConnect backtest files</p>
                 </div>
                 <div class="process-step">
                     <h3>2. Data Transformation</h3>
@@ -271,11 +272,11 @@
                 </div>
                 <div class="process-step">
                     <h3>3. Performance Analysis</h3>
-                    <p>Compute key metrics: Sharpe ratio, drawdowns, rolling returns, trade statistics</p>
+                    <p>Compute key metrics: Sharpe ratio, drawdowns, percent profitable, trade statistics</p>
                 </div>
                 <div class="process-step">
                     <h3>4. Dashboard Generation</h3>
-                    <p>Create interactive visualizations: equity curves, risk metrics, trade analysis</p>
+                    <p>Create interactive visualizations: summary comparison, order details, equity curve & drawdown</p>
                 </div>
             </div>
         </section>
@@ -284,11 +285,10 @@
             <h2 class="section-title">Key Features</h2>
             <div class="project-image" style="text-align: left;">
                 <img src="./images/qc-metrics-screenshot.png" alt="Strategy Metrics Comparison">
-                <p><em>Comparative analysis of multiple strategy versions</em></p>
+                <p><em>Comparative analysis of multiple strategy criteria</em></p>
             </div>
             
             <ul>
-                <li><strong>Automated Reporting:</strong> Scheduled generation of PDF performance reports</li>
                 <li><strong>Strategy Comparison:</strong> Side-by-side evaluation of multiple backtests</li>
                 <li><strong>Trade Analysis:</strong> Detailed examination of individual trade execution</li>
                 <li><strong>Parameter Optimization:</strong> Visualization of parameter sensitivity</li>
@@ -301,9 +301,8 @@
             <p>The system leverages modern data science tools:</p>
             <ul>
                 <li><strong>Data Processing:</strong> Pandas for ETL operations with custom data quality checks</li>
-                <li><strong>Visualization:</strong> Plotly Dash for interactive web-based dashboards</li>
-                <li><strong>Storage:</strong> SQLite for local analysis, PostgreSQL for team collaboration</li>
-                <li><strong>Automation:</strong> GitHub Actions for scheduled report generation</li>
+                <li><strong>Table Visualization:</strong> Streamlit based web app for tables</li>
+                <li><strong>Visualization:</strong> Plotly for interactive web-based charts</li>
                 <li><strong>Analysis:</strong> Custom Python library for financial metrics calculation</li>
             </ul>
             
@@ -323,11 +322,8 @@
             <a href="https://github.com/jbeckford-data" target="_blank">
                 <i class="fab fa-github"></i> GitHub
             </a>
-            <a href="mailto:your-email@example.com">
-                <i class="fas fa-envelope"></i> Contact
-            </a>
         </div>
-        <p>© 2024 John Beckford - Quantitative Risk Analyst</p>
+        <p>2025 John Beckford - Quantitative Analyst</p>
     </footer>
 </body>
 </html>
