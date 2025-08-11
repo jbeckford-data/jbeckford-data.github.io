@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Treasury Curve Analysis | John Beckford</title>
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #3498db;
+            --light: #f8f9fa;
+            --dark: #343a40;
+            --text: #333;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: var(--text);
+            line-height: 1.6;
+            background-color: var(--light);
+        }
+        
+        /* Header */
+        .project-header {
+            background: var(--primary);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+        
+        .back-link {
+            color: white;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+        }
+        
+        .back-link:hover {
+            text-decoration: underline;
+        }
+        
+        .back-link svg {
+            margin-right: 5px;
+        }
+        
+        .project-title {
+            margin: 0.5rem 0;
+            font-size: 2rem;
+        }
+        
+        .project-subtitle {
+            opacity: 0.9;
+            font-weight: 300;
+            margin-bottom: 0;
+        }
+        
+        /* Main Content */
+        .project-container {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+        
+        .project-image {
+            text-align: center;
+            margin: 2rem 0;
+        }
+        
+        .project-image img {
+            max-width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        
+        .project-section {
+            margin-bottom: 3rem;
+        }
+        
+        .section-title {
+            color: var(--primary);
+            border-bottom: 2px solid var(--secondary);
+            padding-bottom: 0.5rem;
+        }
+        
+        .tech-tags {
+            margin: 1rem 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+        
+        .tech-tag {
+            background: #e0f2fe;
+            color: #0369a1;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+        }
+        
+        /* Footer */
+        .project-footer {
+            text-align: center;
+            padding: 2rem;
+            background: var(--primary);
+            color: white;
+            margin-top: 3rem;
+        }
+        
+        .footer-links a {
+            color: white;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+        
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .project-container {
+                padding: 0 1rem;
+            }
+            
+            .project-title {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="project-header">
+        <a href="/" class="back-link">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M19 12H5M12 19l-7-7 7-7"/>
+            </svg>
+            Back to Portfolio
+        </a>
+        <h1 class="project-title">Treasury Curve Analysis</h1>
+        <p class="project-subtitle">Interactive visualization of yield curve dynamics</p>
+        <div class="tech-tags" style="justify-content: center;">
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">Pandas</span>
+            <span class="tech-tag">Plotly</span>
+            <span class="tech-tag">Jupyter</span>
+        </div>
+    </header>
+    
+    <!-- Main Content -->
+    <main class="project-container">
+        <div class="project-image">
+            <img src="./images/T_Curve_2024.png" alt="Treasury Curve Visualization">
+        </div>
+        
+        <section class="project-section">
+            <h2 class="section-title">Project Overview</h2>
+            <p>This analysis provides an interactive exploration of the U.S. Treasury yield curve, examining the relationship between maturities and macroeconomic indicators. The tool enables:</p>
+            <ul>
+                <li>Dynamic visualization of yield curve movements over time</li>
+                <li>Comparative analysis across different economic regimes</li>
+                <li>Correlation studies with inflation and GDP data</li>
+                <li>Forward rate calculations and spread analysis</li>
+            </ul>
+        </section>
+        
+        <section class="project-section">
+            <h2 class="section-title">Technical Implementation</h2>
+            <p>The system was developed using Python's quantitative finance stack:</p>
+            <ul>
+                <li><strong>Data Pipeline:</strong> Automated collection of Treasury data from FRED API</li>
+                <li><strong>Analysis:</strong> NumPy for curve interpolation and PCA decomposition</li>
+                <li><strong>Visualization:</strong> Plotly for interactive 3D surface plots</li>
+                <li><strong>Notebook:</strong> Jupyter with widget controls for parameter exploration</li>
+            </ul>
+            
+            <div class="project-image">
+                <img src="./images/treasury_analysis_screenshot.png" alt="Yield Curve Analysis Interface" style="max-height: 500px;">
+                <p><em>Interactive analysis interface showing principal components</em></p>
+            </div>
+        </section>
+        
+        <section class="project-section">
+            <h2 class="section-title">Key Findings</h2>
+            <p>The analysis revealed several insights about yield curve behavior:</p>
+            <ul>
+                <li>Identified three principal components explaining 98% of variance (level, slope, curvature)</li>
+                <li>Demonstrated predictive power of curve inversion for recessions</li>
+                <li>Quantified liquidity premium differences across maturities</li>
+                <li>Developed regime-switching model for curve dynamics</li>
+            </ul>
+        </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="project-footer">
+        <div class="footer-links">
+            <a href="https://www.linkedin.com/in/john-beckford" target="_blank">
+                <i class="fab fa-linkedin"></i> LinkedIn
+            </a>
+            <a href="https://github.com/jbeckford-data" target="_blank">
+                <i class="fab fa-github"></i> GitHub
+            </a>
+        </div>
+        <p>© 2024 John Beckford - Quantitative Risk Analyst</p>
+    </footer>
+</body>
+</html>
