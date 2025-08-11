@@ -24,7 +24,7 @@
 
 <hr size="2">
 
-[QC Backtests: ETL & Dashboard Analysis](/QCBacktests.md)
+[QC Backtests: ETL & Dashboard Analysis](/QCBacktest.md)
 <p>A data analysis project demonstrating Extract, Transform, Load (ETL) processes and interactive dashboard visualizations for quantitative trading strategies.</p>
     <p>This project showcases:</p>
     <ul>
