@@ -24,8 +24,8 @@
 
 <hr size="2">
 <div class="project">
-[QC Backtests: ETL & Dashboard Analysis](/QCBacktest.md)
-    <p>A data analysis project demonstrating Extract, Transform, Load (ETL) processes and interactive dashboard visualizations for quantitative trading strategies.</p>
+[Surface View of Treasury Curve - Jupyter Notebook](/t_curve.md)
+<p>A data analysis project demonstrating Extract, Transform, Load (ETL) processes and interactive dashboard visualizations for quantitative trading strategies.</p>
     <p>This project showcases:</p>
     <ul>
         <li>ETL pipelines for processing backtest results from QuantConnect</li>
