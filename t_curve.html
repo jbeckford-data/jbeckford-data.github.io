@@ -22,6 +22,27 @@
             background-color: var(--light);
         }
         
+            .comparison-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        margin: 2rem 0;
+        }
+        
+        .period-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-top: 4px solid;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        @media (max-width: 768px) {
+            .comparison-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
         /* Header */
         .project-header {
             background: var(--primary);
