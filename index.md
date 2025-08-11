@@ -24,7 +24,7 @@
 
 <hr size="2">
 <div class="project">
-    <h3><a href= "https://jbeckford-data.github.io/QCBacktest.html">QC Backtests: ETL & Dashboard Analysis</a></h3>
+    <h3>[QC Backtests: ETL & Dashboard Analysis](/QCBacktest.md)</h3>
     <p>A data analysis project demonstrating Extract, Transform, Load (ETL) processes and interactive dashboard visualizations for quantitative trading strategies.</p>
     <p>This project showcases:</p>
     <ul>
