@@ -23,7 +23,7 @@
 <img src="images/52183258.png?raw=true"/>
 
 <hr size="2">
-<div class="project">
+
 [Surface View of Treasury Curve - Jupyter Notebook](/t_curve.md)
 <p>A data analysis project demonstrating Extract, Transform, Load (ETL) processes and interactive dashboard visualizations for quantitative trading strategies.</p>
     <p>This project showcases:</p>
