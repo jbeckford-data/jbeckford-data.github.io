@@ -1,9 +1,3 @@
----
-layout: page
-title: QC-Backtests - ETL & Dashboard Analysis
-permalink: /qc-backtests/
----
-
 ![QC-Backtests Dashboard](assets/images/qc-backtests-dashboard.png)  
 *Interactive dashboard for comparative analysis*  
 
