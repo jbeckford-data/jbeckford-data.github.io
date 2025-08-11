@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuantConnect Analytics | John Beckford</title>
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #3498db;
+            --light: #f8f9fa;
+            --dark: #343a40;
+            --text: #333;
+            --success: #28a745;
+            --warning: #ffc107;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: var(--text);
+            line-height: 1.6;
+            background-color: var(--light);
+        }
+        
+        /* Header */
+        .project-header {
+            background: var(--primary);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+        
+        .back-link {
+            color: white;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+        }
+        
+        .back-link:hover {
+            text-decoration: underline;
+        }
+        
+        .back-link svg {
+            margin-right: 5px;
+        }
+        
+        .project-title {
+            margin: 0.5rem 0;
+            font-size: 2rem;
+        }
+        
+        .project-subtitle {
+            opacity: 0.9;
+            font-weight: 300;
+            margin-bottom: 0;
+        }
+        
+        /* Main Content */
+        .project-container {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+        
+        .project-image {
+            text-align: center;
+            margin: 2rem 0;
+        }
+        
+        .project-image img {
+            max-width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        
+        .project-section {
+            margin-bottom: 3rem;
+        }
+        
+        .section-title {
+            color: var(--primary);
+            border-bottom: 2px solid var(--secondary);
+            padding-bottom: 0.5rem;
+        }
+        
+        .tech-tags {
+            margin: 1rem 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+        
+        .tech-tag {
+            background: #e0f2fe;
+            color: #0369a1;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+        }
+        
+        .metric-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .metric-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        
+        .metric-value {
+            font-size: 2rem;
+            font-weight: 700;
+            margin: 0.5rem 0;
+        }
+        
+        .positive {
+            color: var(--success);
+        }
+        
+        .negative {
+            color: #dc3545;
+        }
+        
+        .neutral {
+            color: var(--warning);
+        }
+        
+        .process-flow {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 2rem 0;
+        }
+        
+        .process-step {
+            background: white;
+            padding: 1rem 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+            width: 80%;
+            margin-bottom: 1rem;
+            position: relative;
+        }
+        
+        .process-step:not(:last-child):after {
+            content: "";
+            position: absolute;
+            bottom: -1rem;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 0;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-top: 10px solid white;
+        }
+        
+        /* Footer */
+        .project-footer {
+            text-align: center;
+            padding: 2rem;
+            background: var(--primary);
+            color: white;
+            margin-top: 3rem;
+        }
+        
+        .footer-links a {
+            color: white;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+        
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .project-container {
+                padding: 0 1rem;
+            }
+            
+            .project-title {
+                font-size: 1.8rem;
+            }
+            
+            .process-step {
+                width: 100%;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="project-header">
+        <a href="/" class="back-link">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M19 12H5M12 19l-7-7 7-7"/>
+            </svg>
+            Back to Portfolio
+        </a>
+        <h1 class="project-title">QuantConnect Analytics</h1>
+        <p class="project-subtitle">ETL Pipeline & Strategy Performance Dashboard</p>
+        <div class="tech-tags" style="justify-content: center;">
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">QuantConnect</span>
+            <span class="tech-tag">Pandas</span>
+            <span class="tech-tag">Plotly</span>
+            <span class="tech-tag">ETL</span>
+        </div>
+    </header>
+    
+    <!-- Main Content -->
+    <main class="project-container">
+        <div class="project-image">
+            <img src="./images/qc-dashboard-screenshot.png" alt="QuantConnect Analytics Dashboard">
+        </div>
+        
+        <section class="project-section">
+            <h2 class="section-title">Project Overview</h2>
+            <p>This automated pipeline transforms raw QuantConnect backtest results into actionable insights through a comprehensive ETL process and interactive dashboard. The system provides:</p>
+            
+            <div class="metric-grid">
+                <div class="metric-card">
+                    <div>Strategy CAGR</div>
+                    <div class="metric-value positive">+18.7%</div>
+                    <div>Top Performing Strategy</div>
+                </div>
+                <div class="metric-card">
+                    <div>Max Drawdown</div>
+                    <div class="metric-value negative">-12.3%</div>
+                    <div>Risk Assessment</div>
+                </div>
+                <div class="metric-card">
+                    <div>Sharpe Ratio</div>
+                    <div class="metric-value positive">1.42</div>
+                    <div>Risk-Adjusted Returns</div>
+                </div>
+                <div class="metric-card">
+                    <div>Win Rate</div>
+                    <div class="metric-value neutral">58.6%</div>
+                    <div>Trade Success Ratio</div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="project-section">
+            <h2 class="section-title">ETL Pipeline Architecture</h2>
+            <p>The automated data processing workflow:</p>
+            
+            <div class="process-flow">
+                <div class="process-step">
+                    <h3>1. Data Extraction</h3>
+                    <p>Pull raw JSON backtest results from QuantConnect API and local backtest files</p>
+                </div>
+                <div class="process-step">
+                    <h3>2. Data Transformation</h3>
+                    <p>Clean and normalize data: adjust timestamps, calculate derived metrics, handle missing values</p>
+                </div>
+                <div class="process-step">
+                    <h3>3. Performance Analysis</h3>
+                    <p>Compute key metrics: Sharpe ratio, drawdowns, rolling returns, trade statistics</p>
+                </div>
+                <div class="process-step">
+                    <h3>4. Dashboard Generation</h3>
+                    <p>Create interactive visualizations: equity curves, risk metrics, trade analysis</p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="project-section">
+            <h2 class="section-title">Key Features</h2>
+            <div class="project-image" style="text-align: left;">
+                <img src="./images/qc-metrics-screenshot.png" alt="Strategy Metrics Comparison">
+                <p><em>Comparative analysis of multiple strategy versions</em></p>
+            </div>
+            
+            <ul>
+                <li><strong>Automated Reporting:</strong> Scheduled generation of PDF performance reports</li>
+                <li><strong>Strategy Comparison:</strong> Side-by-side evaluation of multiple backtests</li>
+                <li><strong>Trade Analysis:</strong> Detailed examination of individual trade execution</li>
+                <li><strong>Parameter Optimization:</strong> Visualization of parameter sensitivity</li>
+                <li><strong>Custom Metrics:</strong> Strategy-specific performance indicators</li>
+            </ul>
+        </section>
+        
+        <section class="project-section">
+            <h2 class="section-title">Technical Implementation</h2>
+            <p>The system leverages modern data science tools:</p>
+            <ul>
+                <li><strong>Data Processing:</strong> Pandas for ETL operations with custom data quality checks</li>
+                <li><strong>Visualization:</strong> Plotly Dash for interactive web-based dashboards</li>
+                <li><strong>Storage:</strong> SQLite for local analysis, PostgreSQL for team collaboration</li>
+                <li><strong>Automation:</strong> GitHub Actions for scheduled report generation</li>
+                <li><strong>Analysis:</strong> Custom Python library for financial metrics calculation</li>
+            </ul>
+            
+            <div class="project-image">
+                <img src="./images/qc-trade-analysis.png" alt="Trade Execution Analysis">
+                <p><em>Trade-level execution analysis with slippage modeling</em></p>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="project-footer">
+        <div class="footer-links">
+            <a href="https://www.linkedin.com/in/john-beckford" target="_blank">
+                <i class="fab fa-linkedin"></i> LinkedIn
+            </a>
+            <a href="https://github.com/jbeckford-data" target="_blank">
+                <i class="fab fa-github"></i> GitHub
+            </a>
+            <a href="mailto:your-email@example.com">
+                <i class="fas fa-envelope"></i> Contact
+            </a>
+        </div>
+        <p>© 2024 John Beckford - Quantitative Risk Analyst</p>
+    </footer>
+</body>
+</html>
