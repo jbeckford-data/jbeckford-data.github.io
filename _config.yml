@@ -1,13 +1,35 @@
-title: John Beckford # your name (or website title) here
-logo: "/images/1726765151942.jpg?raw=true" # your photo (or logo) here
-description: > # your text below (remove <br> elements if you don't need line breaks)
-  Experienced Capital Markets Risk Analyst with a strong background in quantitative analysis, algorithm development, and data analysis utilizing Python. 
-  Adept at developing proprietary applications to enhance efficiency and deliver high-quality output to management. 
-  Seeking to leverage skills in data science and portfolio management to develop data-driven decision-making. 
-  <br><br>
-  <a href="https://www.linkedin.com/in/john-beckford">My LinkedIn Profile</a> 
-  
-remote_theme: pages-themes/minimal@v0.2.0
+title: John Beckford
+logo: "/images/1726765151942.jpg?raw=true"
+description: >
+  Quantitative Risk Analyst | Algorithm Development | Data Science
+  <br>
+  Building data-driven solutions for capital markets efficiency
+theme: jekyll-theme-cayman  # More modern than minimal
 plugins:
-- jekyll-remote-theme
-google_analytics: G-82MHSZEQG3 # your Google Analytics tracking ID here
+  - jekyll-seo-tag  # For better SEO
+  - jekyll-sitemap  # For site navigation
+
+# Full-width layout settings
+markdown: kramdown
+kramdown:
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    css_class: highlight
+    span:
+      line_numbers: false
+    block:
+      line_numbers: false
+      start_line: 1
+
+# Custom CSS (create file at /assets/css/style.scss)
+stylesheets:
+  - /assets/css/style.scss
+
+# Modern meta tags
+seo:
+  name: John Beckford
+  links:
+    - "https://www.linkedin.com/in/john-beckford"
+    - "https://github.com/jbeckford-data"
+
+google_analytics: G-82MHSZEQG3
