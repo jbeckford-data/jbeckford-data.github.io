@@ -9,8 +9,8 @@ Key features:
 ✔ **Data cleaning & transformation** using Python (Pandas, NumPy)  
 ✔ **Interactive dashboards** (Plotly, Streamlit, or similar)
 ✔ **Performance analytics** (Sharpe ratio, drawdowns, equity curves)
-✔ **Systematic strategy evaluation** (performance metrics, risk/reward trends)  
-✔ **Trade-level auditing** (entry/exit details,  time series analysis)  
+✔ **Systematic strategy evaluation** (performance metrics, risk/reward trends)
+✔ **Trade-level auditing** (entry/exit details,  time series analysis)
 ✔ **Portfolio-level decision support** (scenario comparisons)
 
 ---
