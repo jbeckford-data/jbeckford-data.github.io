@@ -21,6 +21,57 @@
             line-height: 1.6;
             background-color: var(--light);
         }
+
+        /* Comparison Container */
+.comparison-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.period-with-image {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* Image Styling */
+.yield-image-container {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.yield-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s;
+}
+
+.yield-image:hover {
+    transform: scale(1.02);
+}
+
+.image-caption {
+    text-align: center;
+    font-size: 0.85rem;
+    color: #555;
+    margin-top: 0.5rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .comparison-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .period-card, .yield-image-container {
+        width: 100%;
+    }
+}
         
             .comparison-grid {
         display: grid;
@@ -204,7 +255,8 @@
          <section class="project-section">
     <h2 class="section-title">Yield Curve Evolution: 2020 vs. 2024</h2>
     
-    <div class="comparison-grid">
+    <div class="comparison-container">
+    <div class="period-with-image">
         <div class="period-card" style="border-color: #3498db;">
             <h3>2020 Crisis Period</h3>
             <ul>
@@ -214,7 +266,13 @@
             </ul>
             <p>Emergency easing flattened curves during market stress</p>
         </div>
-        
+        <div class="yield-image-container">
+            <img src="./images/2020yields.png" alt="2020 Yield Curve" class="yield-image">
+            <p class="image-caption">March 2020: Pandemic Emergency Rates</p>
+        </div>
+    </div>
+    
+    <div class="period-with-image">
         <div class="period-card" style="border-color: #e74c3c;">
             <h3>2024 Inflation Fight</h3>
             <ul>
@@ -224,18 +282,12 @@
             </ul>
             <p>Aggressive hiking cycle reshaped yield relationships</p>
         </div>
-    </div>
-        
-        <div class="yield-comparison-images">
-        <div class="yield-image-container">
-            <img src="./images/2020yields.png" alt="2020 Yield Curve" class="yield-image">
-            <p class="image-caption">March 2020: Pandemic Emergency Rates</p>
-        </div>
         <div class="yield-image-container">
             <img src="./images/2024yields.png" alt="2024 Yield Curve" class="yield-image">
             <p class="image-caption">May 2024: Inflation-Fighting Regime</p>
         </div>
     </div>
+</div>
         </section>
         
         <section class="project-section">
