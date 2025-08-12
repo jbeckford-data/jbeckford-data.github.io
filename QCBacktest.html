@@ -61,6 +61,42 @@
         }
         
         /* Main Content */
+
+        /* Streamlit App CTA Styles */
+        .app-cta {
+            text-align: center;
+            margin: 2rem 0;
+        }
+        
+        .streamlit-button {
+            display: inline-flex;
+            align-items: center;
+            background: #FF4B4B;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            box-shadow: 0 2px 10px rgba(255, 75, 75, 0.2);
+        }
+        
+        .streamlit-button:hover {
+            background: #E53E3E;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(255, 75, 75, 0.3);
+        }
+        
+        .streamlit-logo {
+            height: 24px;
+            margin-right: 12px;
+        }
+        
+        .app-note {
+            font-size: 0.9rem;
+            color: #666;
+            margin-top: 8px;
+        }
         .project-container {
             max-width: 1000px;
             margin: 2rem auto;
@@ -221,6 +257,20 @@
             <span class="tech-tag">Streamlit</span>
             <span class="tech-tag">ETL</span>
         </div>
+        <section class="project-section">
+    <h2 class="section-title">Interactive Dashboard</h2>
+    <div class="app-cta">
+        <a href="https://qc-backtests-jbeckford.streamlit.app/" 
+           target="_blank" 
+           class="streamlit-button">
+            <img src="https://streamlit.io/images/brand/streamlit-mark-color.svg" 
+                 alt="Streamlit Logo"
+                 class="streamlit-logo">
+            Launch QuantConnect Analytics App
+        </a>
+        <p class="app-note">Live interactive version with full functionality</p>
+    </div>
+</section>
     </header>
     
     <!-- Main Content -->
@@ -301,10 +351,24 @@
             </ul>
             
             <div class="project-image">
-                <img src="./images/qc-trade-analysis.png" alt="Trade Execution Analysis">
+                <img src="./images/qc-orders.png" alt="Trade Execution Analysis">
                 <p><em>Trade-level execution analysis</em></p>
             </div>
         </section>
+        <section class="project-section">
+    <h2 class="section-title">Interactive Dashboard</h2>
+    <div class="app-cta">
+        <a href="https://qc-backtests-jbeckford.streamlit.app/" 
+           target="_blank" 
+           class="streamlit-button">
+            <img src="https://streamlit.io/images/brand/streamlit-mark-color.svg" 
+                 alt="Streamlit Logo"
+                 class="streamlit-logo">
+            Launch QuantConnect Analytics App
+        </a>
+        <p class="app-note">Live version with full functionality</p>
+    </div>
+</section>
     </main>
     
     <!-- Footer -->
