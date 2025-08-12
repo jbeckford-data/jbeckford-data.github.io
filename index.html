@@ -6,11 +6,16 @@
     <title>John Beckford - Financial Data Analyst</title>
     <style>
         :root {
-            --primary: #2c3e50;
-            --secondary: #3498db;
-            --light: #f8f9fa;
-            --dark: #343a40;
-            --text: #333;
+          --primary: #2c3e50;
+          --secondary: #3498db;
+          --light: #f8f9fa;
+          --dark: #343a40;
+          --text: #333;
+          --background: #f8f9fa;
+          --card-bg: white;
+          --border: #dee2e6;
+          --success: #28a745;
+          --warning: #ffc107;
         }
         
         body {
@@ -172,6 +177,19 @@
             
             .main-content {
                 padding: 2rem 1rem;
+            }
+            @media (prefers-color-scheme: dark) {
+              :root {
+                --primary: #3498db;
+                --secondary: #1abc9c;
+                --text: #f8f9fa;
+                --background: #121212;
+                --card-bg: #1e1e1e;
+                --border: #333;
+                /* Keep success/warning colors but adjust brightness */
+                --success: #5cb85c;
+                --warning: #f0ad4e;
+              }
             }
         }
     </style>
