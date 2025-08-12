@@ -55,6 +55,88 @@
     transform: scale(1.02);
 }
 
+/* ===== Image Popout Modal ===== */
+.modal-toggle {
+    display: none;
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-toggle:checked + .modal-overlay {
+    display: flex;
+}
+
+.modal-backdrop {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.8);
+    cursor: zoom-out;
+}
+
+.modal-content {
+    position: relative;
+    z-index: 1001;
+    max-width: 80vw;
+    max-height: 80vh;
+    animation: fadeIn 0.3s;
+}
+
+.modal-content img {
+    max-height: 80vh;
+    max-width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+}
+
+.modal-close {
+    position: absolute;
+    top: -40px;
+    right: 0;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.image-popout-trigger {
+    cursor: zoom-in;
+    position: relative;
+    display: block;
+}
+
+.zoom-indicator {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    background: rgba(0,0,0,0.6);
+    color: white;
+    padding: 4px;
+    text-align: center;
+    font-size: 0.8rem;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.image-popout-trigger:hover .zoom-indicator {
+    opacity: 1;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+}
+
 .image-caption {
     text-align: center;
     font-size: 0.85rem;
@@ -267,7 +349,10 @@
             <p>Emergency easing flattened curves during market stress</p>
         </div>
         <div class="yield-image-container">
-            <img src="./images/2020yields.png" alt="2020 Yield Curve" class="yield-image">
+            <label for="modal-toggle-2020" class="image-popout-trigger">
+                <img src="./images/2020yields.png" alt="2020 Yield Curve" class="yield-image">
+                <span class="zoom-indicator">🔍 Click to enlarge</span>
+            </label>
             <p class="image-caption">March 2020: Pandemic Emergency Rates</p>
         </div>
     </div>
@@ -283,7 +368,10 @@
             <p>Aggressive hiking cycle reshaped yield relationships</p>
         </div>
         <div class="yield-image-container">
-            <img src="./images/2024yields.png" alt="2024 Yield Curve" class="yield-image">
+            <label for="modal-toggle-2024" class="image-popout-trigger">
+                <img src="./images/2024yields.png" alt="2024 Yield Curve" class="yield-image">
+                <span class="zoom-indicator">🔍 Click to enlarge</span>
+            </label>
             <p class="image-caption">May 2024: Inflation-Fighting Regime</p>
         </div>
     </div>
