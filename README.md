@@ -1,4 +1,4 @@
-# John Beckford | Quantitative Finance Portfolio
+# John Beckford | Data Analysis Portfolio
 
 This repository showcases my quantitative analysis projects and financial tools developed using Python. The portfolio includes interactive dashboards differing projects - each demonstrating professional-grade data processing, financial modeling, and visualization capabilities.
 
