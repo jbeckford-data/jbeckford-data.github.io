@@ -213,7 +213,7 @@
       /* highlight cell style similar to your screenshot */
       .metrics-table td.val-good {
         background: #27ae60;     /* green fill */
-        color: #fff;             /* white text */
+        color: #222;             /* white text */
         font-weight: 700;
       }
       
@@ -415,7 +415,7 @@
       
       .unified-table td.red {
           background-color: #ff6b6b;
-          color: #fff;
+          color: #222;
           font-weight: 700;
       }
       
@@ -646,16 +646,14 @@
 
     <hr class="sep">
 
-    <section>
-      <h2>Commissions: Drag when daytrading</h2>
+    <section class="project-section">
+      <h2 class="section-title">Commissions: Drag when daytrading</h2>
       <p>Another important adjustment involved adding commissions. The original QC and OA datasets calculated zero transaction costs, which, while convenient for model simplicity, is not reflective of real-world conditions. Especially for 0DTE trading. Once estimated per-contract fees were applied across both datasets, performance numbers shifted noticeably. For day-trading strategies, commissions can meaningfully impact net returns, reducing compounding and amplifying drawdowns over long horizons. The inclusion of over <strong>$8,000</strong> in total fees dramatically reshaped the equity curves and brought both datasets closer together in terms of realistic profitability.</p>
       <p>After completing these corrections and applying consistent logic to both sources, the QC Updated and OA Updated datasets tell a much different story than the original backtests suggests. The updated results show compounded annual returns dropping to 17.8% and 15.7%, respectively, still profitable, but far from the initial 43% projection. Drawdowns increased materially, now reaching 33–34%, with recovery times expanding to more than a full trading year. Risk-adjusted metrics weakened: the Sharpe ratios fell to 0.42 and 0.34, and annualized volatility increased. These figures, while not catastrophic, indicate a strategy that is far less stable and far more sensitive to trade sequencing and costs than originally assumed. The message is clear: attractive first-pass results can obscure structural fragility.</p>
     </section>
-
     <hr class="sep">
-
-    <section>
-      <h2>QC Updated &amp; OA Updated: The Adjusted Reality</h2>
+    <section class="prkect-section">
+      <h2 class="section-title">QC Equity Updated: The Adjusted Reality</h2>
       <p>Visualizing these changes through updated equity curves further reinforces the importance of data verification. While the QC Original curve showed a smooth climb with relatively shallow pullbacks, the corrected versions reveal a more turbulent path, punctuated by large losses and extended drawdown periods. The contrast between QC and OA, both before and after adjustments, highlights how two seemingly similar data sources can create vastly different performance profiles. These shifts underscore a broader reality of trading system development: the difference between a high-confidence system and a misleading one often lies in meticulous data cleaning, reconciliation, and conservative assumptions.</p>
 
       <figure>
@@ -677,7 +675,7 @@
     <tbody>
         <tr>
             <td data-label="Metric">Total Days</td>
-            <td class="green" data-label="QC Original">807</td>
+            <td data-label="QC Original">807</td>
             <td data-label="QA Original">815</td>
             <td data-label="QC Updated">801</td>
             <td data-label="OA Updated">801</td>
@@ -750,7 +748,7 @@
             <td class="green" data-label="QC Original">2.0534</td>
             <td data-label="QA Original">0.7182</td>
             <td data-label="QC Updated">0.4217</td>
-            <td class="red" data-label="OA Updated">0.3359</td>
+            <td class="" data-label="OA Updated">0.3359</td>
         </tr>
         <tr>
             <td data-label="Metric">Sortino Ratio</td>
@@ -775,8 +773,8 @@
         </tr>
         <tr>
             <td data-label="Metric">Total Fees</td>
-            <td data-label="QC Original">$           -</td>
-            <td data-label="QA Original">$           -</td>
+            <td data-label="QC Original">$ 0</td>
+            <td data-label="QA Original">$ 0</td>
             <td data-label="QC Updated">$ 8,138.16</td>
             <td data-label="OA Updated">$ 8,138.16</td>
         </tr>
@@ -787,8 +785,8 @@
 
     <hr class="sep">
 
-    <section>
-      <h2>Conclusion</h2>
+    <section class="project-section">
+      <h2 class="section-title">Conclusion</h2>
       <p>The initial QC backtest suggested near-perfect stability, but reconciliation with a second source, conservative early-trade adjustments, and realistic commission assumptions revealed a far more modest outcome. The strategy remains profitable but shows increased drawdowns and weaker risk-adjusted returns. The broader lesson: treat exceptional backtests with skepticism and require multi-source validation and conservative assumptions before taking a strategy live.</p>
 
       <a class="back-link" href="/">← Back to portfolio</a>
