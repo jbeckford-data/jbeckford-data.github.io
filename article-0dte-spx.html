@@ -7,25 +7,171 @@
   <meta name="description" content="Independent validation and reconciliation of a 0DTE SPX strategy backtest. Corrected results, commissions, equity curves, final comparison table." />
   <link rel="stylesheet" href="/styles.css"> <!-- optional: remove or replace with your stylesheet -->
   <style>
-    /* Local styling to ensure the article looks good on GitHub Pages */
-    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial; line-height:1.6; color:#222; padding:28px; background:#f7f7f7; }
-    .container { max-width:900px; margin:0 auto; background:#fff; padding:28px; box-shadow:0 6px 18px rgba(20,20,20,0.06); border-radius:8px; }
-    h1 { margin-top:0; font-size:1.9rem; }
-    h2 { margin-top:28px; font-size:1.2rem; }
-    hr.sep { border:0; border-top:1px solid #eee; margin:22px 0; }
-    p.lead { color:#333; font-size:1.03rem; }
-    figure { margin:20px 0; text-align:center; }
-    figcaption { font-size:0.88rem; color:#666; margin-top:8px; }
-    .metrics-table { width:100%; border-collapse:collapse; margin:18px 0 28px 0; font-size:0.94rem; }
-    .metrics-table th, .metrics-table td { border:1px solid #eaeaea; padding:8px 10px; text-align:left; }
-    .metrics-table th { background:#fafafa; font-weight:700; }
-    .wide-table { overflow-x:auto; }
-    .meta { color:#777; font-size:0.92rem; margin-bottom:8px; }
-    .byline { color:#666; margin-bottom:20px; font-size:0.95rem; }
-    .caption-note { color:#999; font-size:0.86rem; margin-top:6px; }
-    pre.table-block { background:#f6f8fa; padding:10px; border-radius:6px; overflow:auto; }
-    .back-link { display:inline-block; margin-top:18px; color:#0b6efd; text-decoration:none; }
-  </style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #3498db;
+            --light: #f8f9fa;
+            --dark: #343a40;
+            --text: #333;
+            --success: #28a745;
+            --danger: #dc3545;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: var(--text);
+            line-height: 1.6;
+            background-color: var(--light);
+        }
+        
+        /* Header */
+        .project-header {
+            background: var(--primary);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+        
+        .back-link {
+            color: white;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+        }
+        
+        .back-link:hover {
+            text-decoration: underline;
+        }
+        
+        .back-link svg {
+            margin-right: 5px;
+        }
+        
+        .project-title {
+            margin: 0.5rem 0;
+            font-size: 2rem;
+        }
+        
+        .project-subtitle {
+            opacity: 0.9;
+            font-weight: 300;
+            margin-bottom: 0;
+        }
+        
+        /* Main Content */
+        .project-container {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+        
+        .project-image {
+            text-align: center;
+            margin: 2rem 0;
+        }
+        
+        .project-image img {
+            max-width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        
+        .project-section {
+            margin-bottom: 3rem;
+        }
+        
+        .section-title {
+            color: var(--primary);
+            border-bottom: 2px solid var(--secondary);
+            padding-bottom: 0.5rem;
+        }
+        
+        .tech-tags {
+            margin: 1rem 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+        
+        .tech-tag {
+            background: #e0f2fe;
+            color: #0369a1;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+        }
+        
+        .app-cta {
+            display: inline-block;
+            background: var(--secondary);
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            margin: 1rem 0;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .app-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .feature-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        }
+        
+        .feature-card h3 {
+            color: var(--primary);
+            margin-top: 0;
+        }
+        
+        /* Footer */
+        .project-footer {
+            text-align: center;
+            padding: 2rem;
+            background: var(--primary);
+            color: white;
+            margin-top: 3rem;
+        }
+        
+        .footer-links a {
+            color: white;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+        
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .project-container {
+                padding: 0 1rem;
+            }
+            
+            .project-title {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 <body>
   <main class="container">
