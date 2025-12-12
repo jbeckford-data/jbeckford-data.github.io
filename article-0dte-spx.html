@@ -311,6 +311,37 @@
           color: #666;
         }
       }
+
+    .final-table {
+            border-collapse: collapse;
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .final-table th, .final-table td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: center;
+        }
+        
+        .final-table th {
+            background-color: #f0f0f0;
+            font-weight: bold;
+        }
+        
+        .final-table td:first-child {
+            text-align: left;
+            font-weight: 500;
+        }
+        
+        .green { background-color: #92d050; }
+        .yellow { background-color: #ffff00; }
+        .red { background-color: #ff6b6b; }
+        .light-green { background-color: #c6efce; }
+        .light-red { background-color: #ffc7ce; }
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
@@ -522,13 +553,14 @@
     <section>
       <h2>Commissions: Drag when daytrading</h2>
       <p>Another important adjustment involved adding commissions. The original QC and OA datasets calculated zero transaction costs, which, while convenient for model simplicity, is not reflective of real-world conditions. Especially for 0DTE trading. Once estimated per-contract fees were applied across both datasets, performance numbers shifted noticeably. For day-trading strategies, commissions can meaningfully impact net returns, reducing compounding and amplifying drawdowns over long horizons. The inclusion of over <strong>$8,000</strong> in total fees dramatically reshaped the equity curves and brought both datasets closer together in terms of realistic profitability.</p>
+      <p>After completing these corrections and applying consistent logic to both sources, the QC Updated and OA Updated datasets tell a much different story than the original backtests suggests. The updated results show compounded annual returns dropping to 17.8% and 15.7%, respectively, still profitable, but far from the initial 43% projection. Drawdowns increased materially, now reaching 33–34%, with recovery times expanding to more than a full trading year. Risk-adjusted metrics weakened: the Sharpe ratios fell to 0.42 and 0.34, and annualized volatility increased. These figures, while not catastrophic, indicate a strategy that is far less stable and far more sensitive to trade sequencing and costs than originally assumed. The message is clear: attractive first-pass results can obscure structural fragility.</p>
     </section>
 
     <hr class="sep">
 
     <section>
       <h2>QC Updated &amp; OA Updated: The Adjusted Reality</h2>
-      <p>After corrections and commissions, the updated datasets paint a far more conservative picture. QC Updated and OA Updated show compounded annual returns of <strong>17.80%</strong> and <strong>15.72%</strong>, respectively. Drawdowns increase to the low-30% range, and Sharpe ratios decline to <strong>0.42</strong> and <strong>0.34</strong>. The strategy remains profitable but is markedly more sensitive to sequencing, costs, and data-source assumptions.</p>
+      <p>Visualizing these changes through updated equity curves further reinforces the importance of data verification. While the QC Original curve showed a smooth climb with relatively shallow pullbacks, the corrected versions reveal a more turbulent path, punctuated by large losses and extended drawdown periods. The contrast between QC and OA, both before and after adjustments, highlights how two seemingly similar data sources can create vastly different performance profiles. These shifts underscore a broader reality of trading system development: the difference between a high-confidence system and a misleading one often lies in meticulous data cleaning, reconciliation, and conservative assumptions.</p>
 
       <figure>
         <img src="/images/PLPlotComparison.png" alt="Updated Equity Comparison" style="max-width:100%;height:auto;">
@@ -536,34 +568,124 @@
 
       <h3>Final Comparison Table</h3>
       <div class="wide-table">
-        <table class="metrics-table" aria-label="Final comparison table">
-          <thead>
+        <table class="final-table">
+        <thead>
             <tr>
-              <th>Metric</th>
-              <th>QC Original</th>
-              <th>OA Original</th>
-              <th>QC Updated</th>
-              <th>OA Updated</th>
+                <th></th>
+                <th>QC Original</th>
+                <th>QA Original</th>
+                <th>QC Updated</th>
+                <th>OA Updated</th>
             </tr>
-          </thead>
-          <tbody>
-            <tr><td>Total Days</td><td>807</td><td>815</td><td>801</td><td>801</td></tr>
-            <tr><td>Win Percentage</td><td>93.68%</td><td>91.66%</td><td>91.51%</td><td>91.64%</td></tr>
-            <tr><td>Loss Percentage</td><td>6.32%</td><td>8.34%</td><td>8.49%</td><td>8.36%</td></tr>
-            <tr><td>Average Win</td><td>0.36%</td><td>0.45%</td><td>0.53%</td><td>0.52%</td></tr>
-            <tr><td>Average Loss</td><td>-3.00%</td><td>-3.94%</td><td>-4.60%</td><td>-4.58%</td></tr>
-            <tr><td>Start Equity</td><td>$20,000.00</td><td>$20,000.00</td><td>$20,000.00</td><td>$20,000.00</td></tr>
-            <tr><td>End Equity</td><td>$67,848.00</td><td>$41,637.00</td><td>$34,921.84</td><td>$32,866.84</td></tr>
-            <tr><td>Compounded Annual Return</td><td>43.18%</td><td>24.04%</td><td>17.80%</td><td>15.72%</td></tr>
-            <tr><td>Drawdown</td><td>-11.31%</td><td>-26.19%</td><td>-33.66%</td><td>-31.56%</td></tr>
-            <tr><td>Drawdown Recovery</td><td>28</td><td>200</td><td>373</td><td>389</td></tr>
-            <tr><td>Sharpe Ratio</td><td>2.0534</td><td>0.7182</td><td>0.4217</td><td>0.3359</td></tr>
-            <tr><td>Sortino Ratio</td><td>1.498</td><td>0.888</td><td>0.535</td><td>0.429</td></tr>
-            <tr><td>Annual Variance</td><td>0.019</td><td>0.037</td><td>0.051</td><td>0.049</td></tr>
-            <tr><td>Annual Std Dev</td><td>0.139</td><td>0.193</td><td>0.225</td><td>0.222</td></tr>
-            <tr><td>Total Fees</td><td>$ -</td><td>$ -</td><td>$8,138.16</td><td>$8,138.16</td></tr>
-          </tbody>
-        </table>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Total Days</td>
+                <td class="green">807</td>
+                <td>815</td>
+                <td>801</td>
+                <td>801</td>
+            </tr>
+            <tr>
+                <td>Win Percentage</td>
+                <td class="green">93.88%</td>
+                <td class="yellow">91.66%</td>
+                <td class="yellow">91.51%</td>
+                <td class="yellow">91.64%</td>
+            </tr>
+            <tr>
+                <td>Loss Percentage</td>
+                <td class="light-green">6.32%</td>
+                <td class="light-red">8.34%</td>
+                <td class="light-red">8.49%</td>
+                <td class="light-red">8.36%</td>
+            </tr>
+            <tr>
+                <td>Average Win</td>
+                <td>0.36%</td>
+                <td>0.45%</td>
+                <td>0.53%</td>
+                <td>0.52%</td>
+            </tr>
+            <tr>
+                <td>Average Loss</td>
+                <td>-3.00%</td>
+                <td>-3.94%</td>
+                <td>-4.60%</td>
+                <td>-4.58%</td>
+            </tr>
+            <tr>
+                <td>Start Equity</td>
+                <td>$ 20,000.00</td>
+                <td>$ 20,000.00</td>
+                <td>$ 20,000.00</td>
+                <td>$ 20,000.00</td>
+            </tr>
+            <tr>
+                <td>End Equity</td>
+                <td class="green">$ 67,648.00</td>
+                <td class="yellow">$ 41,637.00</td>
+                <td class="yellow">$ 34,921.84</td>
+                <td class="red">$ 32,866.84</td>
+            </tr>
+            <tr>
+                <td>Compounded Annual Return</td>
+                <td>43.18%</td>
+                <td>24.04%</td>
+                <td>17.80%</td>
+                <td>15.72%</td>
+            </tr>
+            <tr>
+                <td>Drawdown</td>
+                <td>11.31%</td>
+                <td>-26.19%</td>
+                <td>-33.66%</td>
+                <td>-31.56%</td>
+            </tr>
+            <tr>
+                <td>Drawdown Recovery</td>
+                <td>28</td>
+                <td>200</td>
+                <td>373</td>
+                <td>389</td>
+            </tr>
+            <tr>
+                <td>Sharpe Ratio</td>
+                <td class="green">2.0534</td>
+                <td>0.7182</td>
+                <td>0.4217</td>
+                <td class="red">0.3359</td>
+            </tr>
+            <tr>
+                <td>Sortino Ratio</td>
+                <td>1.498</td>
+                <td>0.888</td>
+                <td>0.535</td>
+                <td>0.429</td>
+            </tr>
+            <tr>
+                <td>Annual Variance</td>
+                <td>0.019</td>
+                <td>0.037</td>
+                <td>0.051</td>
+                <td>0.049</td>
+            </tr>
+            <tr>
+                <td>Annual Standard Deviation</td>
+                <td>0.139</td>
+                <td>0.193</td>
+                <td>0.225</td>
+                <td>0.222</td>
+            </tr>
+            <tr>
+                <td>Total Fees</td>
+                <td>$           -</td>
+                <td>$           -</td>
+                <td>$ 8,138.16</td>
+                <td>$ 8,138.16</td>
+            </tr>
+        </tbody>
+    </table>
       </div>
     </section>
 
