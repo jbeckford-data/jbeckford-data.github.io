@@ -195,3 +195,185 @@
         <a href="/" class="back-link" aria-label="Back to portfolio">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                  stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M19 12H5M12 19l-7-7 7-7"/>
+            </svg>
+            Back to Portfolio
+        </a>
+        <h1 class="project-title">An Investigative Look Into a 0DTE SPX Strategy</h1>
+        <p class="project-subtitle">Why initial backtest results can mislead — QC vs OA reconciled, commissions applied, and worst-case adjustments shown</p>
+
+        <div class="tech-tags" style="justify-content: center; margin-top: 12px;">
+            <span class="tech-tag">Quant Research</span>
+            <span class="tech-tag">Options / 0DTE</span>
+            <span class="tech-tag">Backtest Validation</span>
+            <span class="tech-tag">Equity Curves</span>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="project-container">
+        <section class="project-section">
+            <h2 class="section-title">Introduction</h2>
+            <p class="lead">Over the last several years, interest in 0-Days-to-Expiration (0DTE) SPX strategies has grown rapidly. The strategy examined here spans roughly three years and, at first glance, appears to deliver exceptional results: a high win rate, strong Sharpe, and a very high compounded annual return. This article shows how independent verification, conservative reconciliation, and adding realistic trading costs materially change that initial picture.</p>
+        </section>
+
+        <hr class="sep">
+
+        <section class="project-section">
+            <h2 class="section-title">QC Original — A Compelling First Pass</h2>
+            <p>The QC Original backtest reports 807 trading days with strong metrics: <strong>93.68% win rate</strong>, <strong>Sharpe 2.05</strong>, and a <strong>43.18% compounded annual return</strong> while showing only an 11.31% max drawdown. At first glance this looks like a robust edge—but that conclusion requires independent verification.</p>
+
+            <div class="wide">
+                <table aria-label="QC Original metrics">
+                    <thead>
+                        <tr><th>Metric</th><th>Value</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Total Days</td><td>807</td></tr>
+                        <tr><td>Win Percentage</td><td>93.68%</td></tr>
+                        <tr><td>Loss Percentage</td><td>6.32%</td></tr>
+                        <tr><td>Average Win</td><td>0.36%</td></tr>
+                        <tr><td>Average Loss</td><td>-3.00%</td></tr>
+                        <tr><td>Net Profit</td><td>2.3924</td></tr>
+                        <tr><td>Start Equity</td><td>$20,000.00</td></tr>
+                        <tr><td>End Equity</td><td>$67,848.00</td></tr>
+                        <tr><td>Compounding Annual Return</td><td>43.18%</td></tr>
+                        <tr><td>Drawdown</td><td>-11.31%</td></tr>
+                        <tr><td>Sharpe Ratio</td><td>2.0534</td></tr>
+                        <tr><td>Sortino Ratio</td><td>1.4984</td></tr>
+                        <tr><td>Annual Std Dev</td><td>0.1388</td></tr>
+                        <tr><td>Total Fees</td><td>$ -</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="project-image" style="margin-top: 8px;">
+                <a href="/images/qc_original_equity.png" target="_blank" rel="noopener">
+                    <img src="/images/qc_original_equity.png" alt="QC Original equity curve" style="width:85%; height:auto;">
+                </a>
+                <figcaption style="display:block; margin-top:8px; color:#666;">Figure 1 — QC Original equity curve (placeholder). Replace with your generated chart at <code>/images/qc_original_equity.png</code>.</figcaption>
+            </div>
+        </section>
+
+        <hr class="sep">
+
+        <section class="project-section">
+            <h2 class="section-title">OA Original — Independent Verification</h2>
+            <p>Testing the same strategy against a second source (OA Original, 815 days) produced materially different results. OA shows a <strong>24.04% annual return</strong>, a <strong>Sharpe of 0.72</strong>, and a <strong>26.19% maximum drawdown</strong>. These differences point to variations in fills, timestamps, or trade-exit logic between the two sources.</p>
+
+            <div class="wide">
+                <table aria-label="OA Original metrics">
+                    <thead><tr><th>Metric</th><th>Value</th></tr></thead>
+                    <tbody>
+                        <tr><td>Total Days</td><td>815</td></tr>
+                        <tr><td>Win Percentage</td><td>91.66%</td></tr>
+                        <tr><td>Loss Percentage</td><td>8.34%</td></tr>
+                        <tr><td>Average Win</td><td>0.45%</td></tr>
+                        <tr><td>Average Loss</td><td>-3.94%</td></tr>
+                        <tr><td>Start Equity</td><td>$20,000.00</td></tr>
+                        <tr><td>End Equity</td><td>$41,637.00</td></tr>
+                        <tr><td>Compounding Annual Return</td><td>24.04%</td></tr>
+                        <tr><td>Drawdown</td><td>-26.19%</td></tr>
+                        <tr><td>Sharpe Ratio</td><td>0.7182</td></tr>
+                        <tr><td>Sortino Ratio</td><td>0.8881</td></tr>
+                        <tr><td>Total Fees</td><td>$ -</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="project-image">
+                <a href="/images/oa_original_equity.png" target="_blank" rel="noopener">
+                    <img src="/images/oa_original_equity.png" alt="OA Original equity curve" style="width:85%; height:auto;">
+                </a>
+                <figcaption style="display:block; margin-top:8px; color:#666;">Figure 2 — OA Original equity curve (placeholder). Replace with your generated chart at <code>/images/oa_original_equity.png</code>.</figcaption>
+            </div>
+        </section>
+
+        <hr class="sep">
+
+        <section class="project-section">
+            <h2 class="section-title">Reconciliation — Early Trades & Worst-Case Adjustments</h2>
+            <p>Because the strategy’s returns are driven by many small wins and occasional larger losses, early-sample trade timing is critical. To be conservative, QC trades that exited before OA’s matching exits were aligned to OA when appropriate. Where QC early winners conflicted with OA early losers, QC was updated to reflect OA’s worse outcome—creating a pessimistic but plausible alternate history.</p>
+
+            <div class="project-image">
+                <a href="/images/reconciliation_illustration.png" target="_blank" rel="noopener">
+                    <img src="/images/reconciliation_illustration.png" alt="Reconciliation illustration" style="width:85%; height:auto;">
+                </a>
+                <figcaption style="display:block; margin-top:8px; color:#666;">Figure 3 — Reconciliation illustration (placeholder). Replace with <code>/images/reconciliation_illustration.png</code>.</figcaption>
+            </div>
+        </section>
+
+        <hr class="sep">
+
+        <section class="project-section">
+            <h2 class="section-title">Commissions Applied</h2>
+            <p>Neither original dataset included transaction costs. After applying realistic per-contract commissions across the samples, total fees exceeded <strong>$8,138</strong>. For a strategy with many small wins, these fees materially reduced compounded returns and extended drawdown recovery times.</p>
+        </section>
+
+        <hr class="sep">
+
+        <section class="project-section">
+            <h2 class="section-title">QC Updated &amp; OA Updated — The Adjusted View</h2>
+            <p>With reconciliation and commissions applied, QC Updated and OA Updated show much more modest outcomes: compounded annual returns of <strong>17.80%</strong> and <strong>15.72%</strong>, drawdowns around <strong>32–34%</strong>, and Sharpe ratios closer to <strong>0.4</strong>. The system remains profitable but is more sensitive to sequencing and costs than the original QC numbers suggested.</p>
+
+            <div class="project-image">
+                <a href="/images/updated_equity_comparison.png" target="_blank" rel="noopener">
+                    <img src="/images/updated_equity_comparison.png" alt="Updated equity comparison QC vs OA" style="width:85%; height:auto;">
+                </a>
+                <figcaption style="display:block; margin-top:8px; color:#666;">Figure 4 — QC Updated vs OA Updated equity curves (placeholder). Replace with <code>/images/updated_equity_comparison.png</code>.</figcaption>
+            </div>
+
+            <h3 style="margin-top: 12px; color: var(--primary);">Final Comparison Table</h3>
+            <div class="wide">
+                <table aria-label="Final comparison table">
+                    <thead>
+                        <tr>
+                            <th>Metric</th><th>QC Original</th><th>OA Original</th><th>QC Updated</th><th>OA Updated</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Total Days</td><td>807</td><td>815</td><td>801</td><td>801</td></tr>
+                        <tr><td>Win Percentage</td><td>93.68%</td><td>91.66%</td><td>91.51%</td><td>91.64%</td></tr>
+                        <tr><td>Loss Percentage</td><td>6.32%</td><td>8.34%</td><td>8.49%</td><td>8.36%</td></tr>
+                        <tr><td>Average Win</td><td>0.36%</td><td>0.45%</td><td>0.53%</td><td>0.52%</td></tr>
+                        <tr><td>Average Loss</td><td>-3.00%</td><td>-3.94%</td><td>-4.60%</td><td>-4.58%</td></tr>
+                        <tr><td>Start Equity</td><td>$20,000.00</td><td>$20,000.00</td><td>$20,000.00</td><td>$20,000.00</td></tr>
+                        <tr><td>End Equity</td><td>$67,848.00</td><td>$41,637.00</td><td>$34,921.84</td><td>$32,866.84</td></tr>
+                        <tr><td>Compounded Return</td><td>43.18%</td><td>24.04%</td><td>17.80%</td><td>15.72%</td></tr>
+                        <tr><td>Drawdown</td><td>-11.31%</td><td>-26.19%</td><td>-33.66%</td><td>-31.56%</td></tr>
+                        <tr><td>Drawdown Recovery</td><td>28</td><td>200</td><td>373</td><td>389</td></tr>
+                        <tr><td>Sharpe Ratio</td><td>2.0534</td><td>0.7182</td><td>0.4217</td><td>0.3359</td></tr>
+                        <tr><td>Sortino Ratio</td><td>1.498</td><td>0.888</td><td>0.535</td><td>0.429</td></tr>
+                        <tr><td>Annual Std Dev</td><td>0.139</td><td>0.193</td><td>0.225</td><td>0.222</td></tr>
+                        <tr><td>Total Fees</td><td>$ -</td><td>$ -</td><td>$8,138.16</td><td>$8,138.16</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <hr class="sep">
+
+        <section class="project-section">
+            <h2 class="section-title">Conclusion</h2>
+            <p>The original QC backtest suggested near-perfect stability, but reconciliation with OA, conservative early-trade adjustments, and realistic commission assumptions revealed a far more modest outcome. The strategy remains profitable but shows greater drawdowns, higher volatility, and lower risk-adjusted returns. The takeaway: require multi-source validation and conservative assumptions before deploying a strategy live.</p>
+
+            <div class="note">
+                <strong>Note:</strong> Replace the placeholder images in <code>/images/</code> with your generated equity curve PNG/SVG files. If you’d like, I can generate those images for you and update this page with them.
+            </div>
+
+            <div style="margin-top: 12px;">
+                <a class="app-cta" href="/" style="text-decoration: none; display:inline-block;">← Back to Portfolio</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="project-footer">
+        <div class="footer-links">
+            <a href="https://www.linkedin.com/in/john-beckford" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i> LinkedIn</a>
+            <a href="https://github.com/jbeckford-data" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a>
+        </div>
+        <p>2025 John Beckford - Financial Data Analyst</p>
+    </footer>
+</body>
+</html>
