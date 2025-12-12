@@ -28,6 +28,13 @@
             color: var(--text);
             line-height: 1.6;
         }
+        .article-card { border:1px solid #e6e6e6; border-radius:8px; padding:18px; max-width:720px; margin:18px 0; background:white; }
+            .card-link { color:inherit; text-decoration:none; display:block; }
+            .card-title { margin:0 0 6px 0; font-size:1.15rem; }
+            .card-sub { margin:0 0 12px 0; color:#555; font-size:0.95rem; }
+            .card-meta { color:#888; font-size:0.85rem; margin-bottom:10px; }
+            .card-excerpt { color:#333; margin-bottom:14px; }
+            .btn { background:#0b6efd; color:#fff; padding:8px 12px; border-radius:6px; font-weight:600; display:inline-block; }
         
         /* Sidebar */
         .sidebar {
@@ -280,6 +287,40 @@
                 </div>
                 </a>
             </div>
+            <!-- 0DTE SPX Investigative Article Card -->
+            <article class="card article-card">
+              <a href="/article-0dte-spx.html" class="card-link" aria-label="Read full investigative article on 0DTE SPX strategy">
+                <header class="card-header">
+                  <h3 class="card-title">An Investigative Look Into a 0DTE SPX Strategy</h3>
+                  <p class="card-sub">Why initial backtest results can mislead — reconciled across two data sources, adjusted for commissions, and stress-tested for worst case outcomes.</p>
+                </header>
+            
+                <div class="card-meta">
+                  <time datetime="2025-12-12">Dec 12, 2025</time>
+                  <span class="reading-time">• ~5 min read</span>
+                </div>
+            
+                <p class="card-excerpt">
+                  Initial QC backtests reported a 43% compound annual return and a 2.05 Sharpe — but independent verification and realistic assumptions changed the story. Read the analysis and see the corrected equity curves and final comparison table.
+                </p>
+            
+                <div class="card-cta">
+                  <span class="btn">Read full article</span>
+                </div>
+              </a>
+            </article>
+            
+            <!-- Minimal CSS to match a clean portfolio (add to your stylesheet) -->
+            <!-- <style>
+            .article-card { border:1px solid #e6e6e6; border-radius:8px; padding:18px; max-width:720px; margin:18px 0; background:white; }
+            .card-link { color:inherit; text-decoration:none; display:block; }
+            .card-title { margin:0 0 6px 0; font-size:1.15rem; }
+            .card-sub { margin:0 0 12px 0; color:#555; font-size:0.95rem; }
+            .card-meta { color:#888; font-size:0.85rem; margin-bottom:10px; }
+            .card-excerpt { color:#333; margin-bottom:14px; }
+            .btn { background:#0b6efd; color:#fff; padding:8px 12px; border-radius:6px; font-weight:600; display:inline-block; }
+            </style> -->
+
         </div>
     </div>
 </body>
