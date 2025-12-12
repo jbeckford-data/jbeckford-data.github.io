@@ -550,9 +550,6 @@
 </table>
 </div>
     </section>
-
-    <hr class="sep">
-
     <section class="project-section">
       <h2 class="section-title">Independent Verification From a Second Source Reveals Differences</h2>
       <p>As with any systematic trading investigation, one of the most important steps is independent verification. Relying on a single data source or execution engine can produce misleading conclusions, especially when the mechanics of trade execution or data timestamping differ across platforms. To validate the QC dataset, the same strategy was tested against a second, unrelated source, referred to as OA Original. Covering the same period with 815 traded days, the OA backtest produced results that diverged substantially.</p>
@@ -636,22 +633,18 @@
 
     <p class="project-section">While still profitable, this version delivered only a 24% compounded annual return, a dramatically lower Sharpe ratio of 0.72, and a far deeper 26% drawdown. The win rate remained high at 91.66%, but the losses were noticeably larger, with an average losing trade near -3.94%, compared to QC’s -3.00%. Such a difference immediately raises questions about data alignment, fill assumptions, and execution timing.</p>
     </section>
-
-    <hr class="sep">
-
+    
     <section class="project-section">
       <h2 class="section-title">Reconciliation Steps: Early Trades and Worst-Case Adjustments</h2>
-      <p>This discrepancy prompted a deeper examination into how each dataset handled trades occurring early in the sample. The strategy’s structure is such that it takes time through the day to be profitable. In the QA reconciliation process, trades from QC that occurred before the earliest trade exit in the OA data were manually updated to the later exit. To prepare for a true worst-case scenario and stress-test the robustness of the returns, QC winning trades were replaced with OA-identified losing trades whenever the two sources conflicted. This creates a pessimistic but realistic estimate of how the strategy might behave under different execution conditions.</p>
+      <p>This discrepancy prompted a deeper examination into how each dataset handled trades occurring early in the sample. The strategy’s structure is such that it takes time through the day to be profitable. In the QA reconciliation process, trades from QC that occurred before the earliest trade exit in the OA data were manually updated to the later exit. To prepare for a true worst-case scenario and stress-testing, QC winning trades were replaced with OA-identified losing trades whenever the two sources conflicted. This creates a pessimistic but realistic estimate of how the strategy might behave under different execution conditions.</p>
     </section>
-
-    <hr class="sep">
-
-    <section class="project-section">
+    
+      <section class="project-section">
       <h2 class="section-title">Commissions: Drag when daytrading</h2>
       <p>Another important adjustment involved adding commissions. The original QC and OA datasets calculated zero transaction costs, which, while convenient for model simplicity, is not reflective of real-world conditions. Especially for 0DTE trading. Once estimated per-contract fees were applied across both datasets, performance numbers shifted noticeably. For day-trading strategies, commissions can meaningfully impact net returns, reducing compounding and amplifying drawdowns over long horizons. The inclusion of over <strong>$8,000</strong> in total fees dramatically reshaped the equity curves and brought both datasets closer together in terms of realistic profitability.</p>
       <p>After completing these corrections and applying consistent logic to both sources, the QC Updated and OA Updated datasets tell a much different story than the original backtests suggests. The updated results show compounded annual returns dropping to 17.8% and 15.7%, respectively, still profitable, but far from the initial 43% projection. Drawdowns increased materially, now reaching 33–34%, with recovery times expanding to more than a full trading year. Risk-adjusted metrics weakened: the Sharpe ratios fell to 0.42 and 0.34, and annualized volatility increased. These figures, while not catastrophic, indicate a strategy that is far less stable and far more sensitive to trade sequencing and costs than originally assumed. The message is clear: attractive first-pass results can obscure structural fragility.</p>
     </section>
-    <hr class="sep">
+
     <section class="prkect-section">
       <h2 class="section-title">QC Equity Updated: The Adjusted Reality</h2>
       <p>Visualizing these changes through updated equity curves further reinforces the importance of data verification. While the QC Original curve showed a smooth climb with relatively shallow pullbacks, the corrected versions reveal a more turbulent path, punctuated by large losses and extended drawdown periods. The contrast between QC and OA, both before and after adjustments, highlights how two seemingly similar data sources can create vastly different performance profiles. These shifts underscore a broader reality of trading system development: the difference between a high-confidence system and a misleading one often lies in meticulous data cleaning, reconciliation, and conservative assumptions.</p>
@@ -782,9 +775,7 @@
 </table>
       </div>
     </section>
-
-    <hr class="sep">
-
+      
     <section class="project-section">
       <h2 class="section-title">Conclusion</h2>
       <p>The initial QC backtest suggested near-perfect stability, but reconciliation with a second source, conservative early-trade adjustments, and realistic commission assumptions revealed a far more modest outcome. The strategy remains profitable but shows increased drawdowns and weaker risk-adjusted returns. The broader lesson: treat exceptional backtests with skepticism and require multi-source validation and conservative assumptions before taking a strategy live.</p>
